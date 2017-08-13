@@ -8,6 +8,13 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/fredlo2010/pluralsight
+          uri: https://github.com/fredlo2010/github-pluralsight-spring-cloudconfig-wa-tolls
           search-paths:
-          - '/java-microservices-with-spring-could-developing-services/springcloud-m2-configserver-git/repo/github-pluralsight-spring-cloudconfig-wa-tolls*\*'
+          - 'station*'
+          repos:
+            perf:
+              pattern:
+              - '*/perf'
+              uri: https://github.com/fredlo2010/github-pluralsight-spring-cloudconfig-wa-tolls-perf
+              search-paths:
+              - 'station*'
