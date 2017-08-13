@@ -1,9 +1,10 @@
 spring:
   profiles:
-    active:
-    - dev
+    active: dev
   cloud:
     config:
       uri: http://localhost:8888
       username: username
       password: password
+encrypt:
+  key: ABCDEFGHIJKLMNOPQRSTUVWYZ

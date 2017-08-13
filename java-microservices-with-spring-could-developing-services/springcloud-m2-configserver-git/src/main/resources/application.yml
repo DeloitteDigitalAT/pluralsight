@@ -24,3 +24,5 @@ spring:
               uri: https://github.com/fredlo2010/github-pluralsight-spring-cloudconfig-wa-tolls-perf
               search-paths:
               - 'station*'
+        encrypt:
+          enabled: false
