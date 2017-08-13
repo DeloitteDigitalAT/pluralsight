@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Pluralsight Training:Config client</title>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<h1>Pluralsight Training:Config client</h1>
+			<p th:text="'rate = ' + ${rateamount}"></p>
+			<p th:text="'lanes = ' + ${lanes}"></p>
+			<p th:text="'tollstart = ' + ${tollstart}"></p>
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+</body>
+
+</html>
