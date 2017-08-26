@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { IProduct } from "./product";
-import { ProductService } from "./product.service";
+import { IProduct } from "../product";
+import { ProductService } from "../product.service";
 
 @Component({
     selector: "pm-products",
@@ -48,10 +48,6 @@ export class ProductListComponent implements OnInit {
                 error => <any>error,
                 () => this.filteredProducts = this.products
             );
-
-
-        // this.products = this._productService.getProducts();
-        // this.filteredProducts = this.products;
     }
 
     onRatingClicked(message: string): void {
