@@ -41,8 +41,17 @@ export class ProductListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.products = this._productService.getProducts();
-        this.filteredProducts = this.products;
+
+        this._productService.getProducts()
+            .subscribe(
+                products => this.products = products,
+                error => <any>error,
+                () => this.filteredProducts = this.products
+            );
+
+
+        // this.products = this._productService.getProducts();
+        // this.filteredProducts = this.products;
     }
 
     onRatingClicked(message: string): void {
