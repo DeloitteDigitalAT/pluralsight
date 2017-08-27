@@ -19,8 +19,7 @@
                 <thead>
                     <tr>
                         <th>
-                            <button class='btn btn-primary' 
-                                (click)=toggleImage()>
+                            <button class='btn btn-primary' (click)=toggleImage()>
                                 {{showImage ? 'Hide' : 'Show'}} Image
                             </button>
                         </th>
@@ -34,20 +33,19 @@
                 <tbody>
                     <tr *ngFor='let product of filteredProducts'>
                         <th>
-                            <img *ngIf='showImage'
-                                [src]='product.imageUrl'
-                                [title]='product.productName'
-                                [style.width.px] = 'imageWidth'
-                                [style.margin.px] = 'imageMargin' >
+                            <img *ngIf='showImage' 
+                            [src]='product.imageUrl' 
+                            [title]='product.productName' 
+                            [style.width.px]='imageWidth' 
+                            [style.margin.px]='imageMargin'>
                         </th>
-                        <th>{{ product.productName}}</th>
+                        <th><a [routerLink]="['/products', product.productId]">
+                            {{ product.productName}}</a></th>
                         <th>{{ product.productCode | lowercase | convertToSpaces:'-'}}</th>
                         <th>{{ product.releaseDate}}</th>
                         <th>{{ product.price | currency:'USD':true:'1.2-2'}}</th>
                         <th>
-                            <pm-star 
-                            [rating] = 'product.starRating'
-                            (ratingClicked) = 'onRatingClicked($event)'></pm-star>
+                            <pm-star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'></pm-star>
                         </th>
                     </tr>
                 </tbody>
